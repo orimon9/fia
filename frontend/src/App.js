@@ -11,8 +11,6 @@ import UserCartDetailsPage from './pages/user/UserCartDetailsPage';
 import UserOrderDetailsPage from './pages/user/UserOrderDetailsPage';
 import UserOrdersPage from './pages/user/UserOrdersPage';
 
-
-
 function App() {
   return (
     <BrowserRouter>
@@ -42,3 +40,4 @@ function App() {
 }
 
 export default App;
+
