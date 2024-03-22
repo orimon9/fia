@@ -1,5 +1,6 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
+
 // components:
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
@@ -14,6 +15,7 @@ import ProductDetailsPage from './pages/ProductDetailsPage';
 import CartPage from './pages/CartPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+
 
 
 import ProtectedRoutesComponent from "./components/ProtectedRoutesComponent";
