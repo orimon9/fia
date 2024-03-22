@@ -1,5 +1,10 @@
+import ProductCarouselComponent from "../components/user/ProductCarouselComponent";
 const HomePage = () => {
-    return <p>This is HomePage</p>;
+    return
+    (
+        <ProductCarouselComponent/>
+    )
+
 };
 
 export default HomePage;
