@@ -4,7 +4,7 @@ import  { Link } from "react-router-dom";
 const HeaderComponent = () => {
 
     return (
-<Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+<Navbar collapseOnSelect expand="lg" bg="secondary" variant="gradient">
       <Container>
         <LinkContainer to="/">
         <Navbar.Brand href="#home">Fia Corporation</Navbar.Brand>
@@ -30,26 +30,15 @@ const HeaderComponent = () => {
           
           <Nav>
           <LinkContainer to="/admin/orders">
-          <Nav.Link>Admin
-            <span className="position-absolute top-1 start-10 translate-middle 
-            p-2 bg-danger border border-light rounded-circle"></span>
-
-
-          </Nav.Link>
-
-          </LinkContainer>
+          <Nav.Link>
+                Admin
+                <span className="position-absolute top-1 start-10 translate-middle p-2 bg-danger border border-light rounded-circle"></span>
+              </Nav.Link>
+            </LinkContainer>
            
-            <Nav.Link href="#pricing">Pricing</Nav.Link> 
-            <Nav.Link href="#pricing">
-            <Badge pill bg="danger">
-                2
-            </Badge>
-                Cart
-            </Nav.Link>
-            <NavDropdown title="Or imon" id="collapsible-nav-dropdown">
-
-              <NavDropdown.Item eventKey="/user/my-orders" as ={Link} to="/user/my-orders">
-                My order
+            <NavDropdown title="Or Imon" id="collasible-nav-dropdown">
+              <NavDropdown.Item eventKey="/user/my-orders" as={Link} to="/user/my-orders">
+                My orders
               </NavDropdown.Item>
 
               <NavDropdown.Item eventKey="/user" as ={Link} to="/user">
@@ -60,14 +49,31 @@ const HeaderComponent = () => {
                 Logout
               </NavDropdown.Item>
 
+              
             </NavDropdown>
 
+              <LinkContainer to="/login">
+              <Nav.Link>Login</Nav.Link>
+            </LinkContainer>
+
+            <LinkContainer to="/register">
+              <Nav.Link>Register</Nav.Link>
+            </LinkContainer>
+
+            <LinkContainer to="/cart">
+              <Nav.Link>
+                <Badge pill bg="danger">
+                  2
+                </Badge>
+                <i class="bi bi-cart-check-fill"></i>
+                <span className="ms-1">CART</span>
+              </Nav.Link>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
-    )
-}
+  );
+};
 
 export default HeaderComponent;
