@@ -1,16 +1,18 @@
-import ProductCarouselComponent from "../components/ProductCarouselComponent";
-import CategoryCardComponent from "../components/CategoryCardComponent";
+import ProductCarouselComponent from "../components/user/ProductCarouselComponent";
+import CategoryCardComponent from "../components/user/CategoryCardComponent";
 import { Row, Container } from "react-bootstrap";
 const HomePage = () => {
   const categories = [
-    "Tablets",
+    "MagneticCaseIPhone",
     "Monitors",
-    "Games",
-    "Printers",
-    "Software",
-    "Cameras",
-    "Books",
-    "Videos",
+    "speakers",
+    "KeratinHairMask",
+    "AthleticShoes",
+    "SportsGlass",
+    "MenVintage",
+    "WirelessMagneticCharger",
+    "DualMonitorArm",
+    "Asus"
   ];
   return (
     <>
@@ -27,4 +29,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-

@@ -1,19 +1,15 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Row, Col } from "react-bootstrap";
 
 const FooterComponent = () => {
-
-    return (
-
-        <Container fluid>
-      <Row className='mt-5'>
+  return (
+    <footer>
+      <Container fluid>
+        <Row className="mt-5">
         <Col className="bg-secondary  text-white text-center py-5">'Happy Shoping; Best Quality Products.'</Col>
-      </Row>
-    </Container>
-
-        
-    );
+        </Row>
+      </Container>
+    </footer>
+  );
 };
 
 export default FooterComponent;
