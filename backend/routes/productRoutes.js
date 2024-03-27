@@ -2,9 +2,8 @@ const express = require('express')
 
 const router = express.Router()
 
-router.get("/",(req,res)=> {
+const getProducts = require('../controller/productController')
 
-    res.send("Handling product routes , eg. search for products")
-})
+router.get("/",getProducts)
 
-module.exports = router
+module.exports = router;
