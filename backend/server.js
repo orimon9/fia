@@ -9,7 +9,7 @@ app.get("/", async (req, res, next) => {
 });
 
 // mongodb connection
-const connectDB = require("./config/db");
+const connectDB = require("./config/db")
 connectDB();
 
 app.use("/api", apiRoutes);
