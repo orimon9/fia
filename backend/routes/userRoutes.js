@@ -1,9 +1,9 @@
 const express = require('express')
 
 const router = express.Router()
+const getUser = require ("../controllers/userController")
 
-const getProducts = require('../controllers/productController')
 
-router.get("/",getProducts)
+router.get("/", getOrders)
 
 module.exports = router
