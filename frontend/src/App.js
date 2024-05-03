@@ -1,100 +1,102 @@
-import {
-  Container,
-  Row,
-  Col,
-  Form,
-  Alert,
-  ListGroup,
-  Button,
-} from "react-bootstrap";
-import CartItemComponent from "../../../components/CartItemComponent";
-import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const UserOrderDetailsPageComponent = ({ userInfo, getUser }) => {
+// components:
+import HeaderComponent from "./components/HeaderComponent";
+import FooterComponent from "./components/FooterComponent";
 
-    const [userAddress, setUserAddress] = useState({});
+//user components:
+import RoutesWithUserChatComponent from "./components/user/RoutesWithUserChatComponent";
 
-    useEffect(() => {
-        getUser()
-        .then(data => {
-           setUserAddress({ address: data.address, city: data.city, country: data.country, zipCode: data.zipCode, state: data.state, phoneNumber: data.phoneNumber }); 
-        })
-        .catch((err) => console.log(err));
-    }, [])
+// publicly available pages:
+import HomePage from "./pages/HomePage";
+import ProductDetailsPage from "./pages/ProductDetailsPage";
+import ProductListPage from "./pages/ProductListPage";
+import CartPage from "./pages/CartPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
+import ProtectedRoutesComponent from "./components/ProtectedRoutesComponent";
+
+// protected user pages:
+import UserProfilePage from "./pages/user/UserProfilePage";
+import UserOrdersPage from "./pages/user/UserOrdersPage";
+import UserCartDetailsPage from "./pages/user/UserCartDetailsPage";
+import UserOrderDetailsPage from "./pages/user/UserOrderDetailsPage";
+
+// protected admin pages:
+import AdminUsersPage from "./pages/admin/AdminUsersPage";
+import AdminEditUserPage from "./pages/admin/AdminEditUserPage";
+import AdminProductsPage from "./pages/admin/AdminProductsPage";
+import AdminCreateProductPage from "./pages/admin/AdminCreateProductPage";
+import AdminEditProductPage from "./pages/admin/AdminEditProductPage";
+import AdminOrdersPage from "./pages/admin/AdminOrdersPage";
+import AdminOrderDetailsPage from "./pages/admin/AdminOrderDetailsPage";
+import AdminChatsPage from "./pages/admin/AdminChatsPage";
+import AdminAnalyticsPage from "./pages/admin/AdminAnalyticsPage";
+import ScrollToTop from "./utils/ScrollToTop";
+
+function App() {
   return (
-    <Container fluid>
-      <Row className="mt-4">
-        <h1>Order Details</h1>
-        <Col md={8}>
-          <br />
-          <Row>
-            <Col md={6}>
-              <h2>Shipping</h2>
-              <b>Name</b>: {userInfo.name} {userInfo.lastName} <br />
-              <b>Address</b>: {userAddress.address} {userAddress.city} {userAddress.state} {userAddress.zipCode} <br />
-              <b>Phone</b>: {userAddress.phoneNumber}
-            </Col>
-            <Col md={6}>
-              <h2>Payment method</h2>
-              <Form.Select disabled={false}>
-                <option value="pp">PayPal</option>
-                <option value="cod">
-                  Cash On Delivery (delivery may be delayed)
-                </option>
-              </Form.Select>
-            </Col>
-            <Row>
-              <Col>
-                <Alert className="mt-3" variant="danger">
-                  Not delivered
-                </Alert>
-              </Col>
-              <Col>
-                <Alert className="mt-3" variant="success">
-                  Paid on 2022-10-02
-                </Alert>
-              </Col>
-            </Row>
-          </Row>
-          <br />
-          <h2>Order items</h2>
-          <ListGroup variant="flush">
-            {Array.from({ length: 3 }).map((item, idx) => (
-              <CartItemComponent item={{image: {path:"/images/tablets-category.png"}, name: "Product name", price:10, count:10, quantity:10}} key={idx} />
-            ))}
-          </ListGroup>
-        </Col>
-        <Col md={4}>
-          <ListGroup>
-            <ListGroup.Item>
-              <h3>Order summary</h3>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              Items price (after tax): <span className="fw-bold">$892</span>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              Shipping: <span className="fw-bold">included</span>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              Tax: <span className="fw-bold">included</span>
-            </ListGroup.Item>
-            <ListGroup.Item className="text-danger">
-              Total price: <span className="fw-bold">$904</span>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <div className="d-grid gap-2">
-                <Button size="lg" variant="danger" type="button">
-                  Pay for the order
-                </Button>
-              </div>
-            </ListGroup.Item>
-          </ListGroup>
-        </Col>
-      </Row>
-    </Container>
-  );
-};
+    <BrowserRouter>
+    <ScrollToTop />
+      <HeaderComponent />
+      <Routes>
+        <Route element={<RoutesWithUserChatComponent />}>
+          {/* publicly available routes: */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/product-list" element={<ProductListPage />} />
+          <Route path="/product-list/:pageNumParam" element={<ProductListPage />} />
+          <Route path="/product-list/category/:categoryName" element={<ProductListPage />} />
+          <Route path="/product-list/category/:categoryName/:pageNumParam" element={<ProductListPage />} />
+          <Route path="/product-list/search/:searchQuery" element={<ProductListPage />} />
+          <Route path="/product-list/search/:searchQuery/:pageNumParam" element={<ProductListPage />} />
+          <Route path="/product-list/category/:categoryName/search/:searchQuery" element={<ProductListPage />} />
+          <Route path="/product-list/category/:categoryName/search/:searchQuery/:pageNumParam" element={<ProductListPage />} />
+          <Route path="/product-details/:id" element={<ProductDetailsPage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="*" element="Page not exists 404" />
+        </Route>
+        {/* <Route path="/" component={HomePage} />  in previous versions of react-router-dom */}
 
-export default UserOrderDetailsPageComponent;
+        {/* user protected routes: */}
+        <Route element={<ProtectedRoutesComponent admin={false} />}>
+          <Route path="/user" element={<UserProfilePage />} />
+          <Route path="/user/my-orders" element={<UserOrdersPage />} />
+          <Route path="/user/cart-details" element={<UserCartDetailsPage />} />
+          <Route
+            path="/user/order-details/:id"
+            element={<UserOrderDetailsPage />}
+          />
+        </Route>
+
+        {/* admin protected routes: */}
+        <Route element={<ProtectedRoutesComponent admin={true} />}>
+          <Route path="/admin/users" element={<AdminUsersPage />} />
+          <Route path="/admin/edit-user/:id" element={<AdminEditUserPage />} />
+          <Route path="/admin/products" element={<AdminProductsPage />} />
+          <Route
+            path="/admin/create-new-product"
+            element={<AdminCreateProductPage />}
+          />
+          <Route
+            path="/admin/edit-product/:id"
+            element={<AdminEditProductPage />}
+          />
+          <Route path="/admin/orders" element={<AdminOrdersPage />} />
+          <Route
+            path="/admin/order-details/:id"
+            element={<AdminOrderDetailsPage />}
+          />
+          <Route path="/admin/chats" element={<AdminChatsPage />} />
+          <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
+        </Route>
+      </Routes>
+      <FooterComponent />
+    </BrowserRouter>
+  );
+}
+
+export default App;
 
