@@ -11,7 +11,7 @@ let getBestsellers = () => {
         _id: "6315f5f6b4ab1404dc103427",
         name: "Product1 Lenovo Comp1 Name Lorem ipsum dolor sit amet",
         description:
-          "Product Description Lorem ipsum dolor sit amet con…ccusantium nihil exercitationem autem porro esse.",
+          "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
         category: "Computers/Laptops/Lenovo",
         images: [{ path: "path" }],
       },

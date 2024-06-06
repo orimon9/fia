@@ -64,7 +64,7 @@ const EditProductPageComponent = ({
     fetchProduct(id)
       .then((product) => setProduct(product))
       .catch((er) => console.log(er));
-  }, [id, imageRemoved, imageUploaded]);
+  }, [fetchProduct, id, imageRemoved, imageUploaded]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -117,7 +117,7 @@ const EditProductPageComponent = ({
     }
     setCategoryChoosen(product.category);
     setAttributesTable(product.attrs);
-  }, [product]);
+  }, [categories, product]);
 
   
 

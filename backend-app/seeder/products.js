@@ -1,8 +1,8 @@
 const products = [
     {
-    name: "Product1 Lenovo Comp1 Name Lorem ipsum dolor sit amet",
+    name: "Product1 Lenovo Comp1 Name The product is very popular",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 5,
     price: 100,
     category: "Computers/Laptops/Lenovo",
@@ -17,9 +17,9 @@ const products = [
     attrs: [{ key: "color", value: "blue" }],
   },
   {
-    name: "Product2 Lenovo Comp2 Name Lorem ipsum dolor sit amet",
+    name: "Product2 Lenovo Comp2 Name The product is very popular",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 5,
     price: 100,
     category: "Computers/Laptops/Lenovo",
@@ -37,9 +37,9 @@ const products = [
     ],
   },
   {
-    name: "Product3 Dell Comp Name Lorem ipsum dolor sit amet",
+    name: "Product3 Dell Comp Name Customer satisfaction is important",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 5,
     price: 100,
     category: "Computers/Laptops/Dell",
@@ -57,9 +57,9 @@ const products = [
     ],
   },
   {
-    name: "Product4 Tablet Name Lorem ipsum dolor sit amet",
+    name: "Product4 Tablet Name Customer satisfaction is important",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 5,
     price: 100,
     category: "Tablets",
@@ -73,9 +73,9 @@ const products = [
     reviews: [],
   },
   {
-    name: "Product5 Tablet Name Lorem ipsum dolor sit amet",
+    name: "Product5 Tablet Name Customer satisfaction is important",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 10,
     price: 200,
     category: "Tablets",
@@ -89,9 +89,9 @@ const products = [
     reviews: [],
   },
   {
-    name: "Product6 Tablet Name Lorem ipsum dolor sit amet",
+    name: "Product6 Tablet Name Customer satisfaction is important",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 15,
     price: 300,
     category: "Tablets",
@@ -105,9 +105,9 @@ const products = [
     reviews: [],
   },
   {
-    name: "Product7 Tablet Name Lorem ipsum dolor sit amet",
+    name: "Product7 Tablet Name The product is very popular",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 20,
     price: 400,
     category: "Tablets",
@@ -121,9 +121,9 @@ const products = [
     reviews: [],
   },
   {
-    name: "Product8 Tablet Name Lorem ipsum dolor sit amet",
+    name: "Product8 Tablet Name Customer satisfaction is very important",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 25,
     price: 500,
     category: "Tablets",
@@ -139,7 +139,7 @@ const products = [
   {
     name: "Product9 Monitor Name Lorem ipsum dolor sit amet",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 5,
     price: 100,
     category: "Monitors",
@@ -155,7 +155,7 @@ const products = [
   {
     name: "Product10 Monitor Name Lorem ipsum dolor sit amet",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 10,
     price: 200,
     category: "Monitors",
@@ -171,7 +171,7 @@ const products = [
   {
     name: "Product11 Monitor Name Lorem ipsum dolor sit amet",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 15,
     price: 300,
     category: "Monitors",
@@ -187,7 +187,7 @@ const products = [
   {
     name: "Product12 Monitor Name Lorem ipsum dolor sit amet",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 20,
     price: 400,
     category: "Monitors",
@@ -203,7 +203,7 @@ const products = [
   {
     name: "Product13 Monitor Name Lorem ipsum dolor sit amet",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 25,
     price: 500,
     category: "Monitors",
@@ -219,7 +219,7 @@ const products = [
   {
     name: "Product14 Game Name Lorem ipsum dolor sit amet",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 5,
     price: 100,
     category: "Games",
@@ -235,7 +235,7 @@ const products = [
   {
     name: "Product15 Game Name Lorem ipsum dolor sit amet",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 10,
     price: 200,
     category: "Games",
@@ -251,7 +251,7 @@ const products = [
   {
     name: "Product16 Game Name Lorem ipsum dolor sit amet",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 15,
     price: 300,
     category: "Games",
@@ -267,7 +267,7 @@ const products = [
   {
     name: "Product17 Game Name Lorem ipsum dolor sit amet",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 20,
     price: 400,
     category: "Games",
@@ -283,7 +283,7 @@ const products = [
   {
     name: "Product18 Game Name Lorem ipsum dolor sit amet",
     description:
-      "Product Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa ducimus architecto explicabo id accusantium nihil exercitationem autem porro esse.",
+      "Product Description The product itself is a very popular product. I will explain to the great chief architect that the accusers are nothing but an exercise.",
     count: 25,
     price: 500,
     category: "Games",
