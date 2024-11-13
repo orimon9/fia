@@ -1,4 +1,10 @@
-﻿# Project Name: Designing and Implementing a Well-being ECommerce Website.
+The purpose of this thesis was to develop a well-being eCommerce website using the MERN stack (MongoDB, Express.js, React, Node.js) to cater to consumer needs. The platform prioritizes user trust and direct involvement to enhance the overall buying experience in the local market.
+
+The goal of the development was to leverage the MERN stack for a flexible, scalable, and efficient solution, integrating client-side and server-side operations through a unified JavaScript framework. In a three-tier e-commerce architecture, the client-server model plays a crucial role in enabling efficient interaction between the client and server components. The client, whether a web browser, mobile app, or other user-facing software, plays a crucial role in facilitating user interaction. The server processes client requests, executes business logic, and manages data to deliver essential services in the e-commerce system.
+
+This architecture ensures seamless communication and functionality in e-commerce systems. The platform architecture follows the Model-View-Controller (MVC) pattern, ensuring clear separation of concerns, which enhances maintainability and scalability. Key features include user registration, authentication, product management, shopping cart functionality, and real-time customer support, all rigorously tested using the Postman API for robust performance and reliability. Redux is implemented for state management, offering centralized control over application data and state transitions. The implementation of React Router DOM enables seamless navigation between different sections of the application without the need for full page reloads, enhancing the user experience. It facilitates navigation and access control within the application, ensuring a seamless user experience. Moreover, the system integrates real-time chat capabilities through WebSocket, fostering dynamic interaction and engagement between users and administrators.
+
+ # Project Name: Designing and Implementing a Well-being ECommerce Website.
 
 ## Project Setup, Environment set, Express server setup -> express package
 
